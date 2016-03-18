@@ -29,6 +29,11 @@
             android:label="@string/my_habits_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Sec"
+            android:label="@string/sec_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

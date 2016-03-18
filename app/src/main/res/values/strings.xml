@@ -2,6 +2,7 @@
     <string name="app_name">GoodHabits</string>
     <string name="quiz_name">Quiz</string>
     <string name="my_habits_name">My Habits</string>
+    <string name="sec_name">Sec</string>
     <string name="action_settings">Settings</string>
 
     <string name="motivational_text">Text motivational sirupos</string>
@@ -10,4 +11,8 @@
     <string name="quiz_hint_age">Age</string>
     <string name="quiz_hint_height">Height (cm)</string>
     <string name="quiz_hint_weight">Weight (cm)</string>
+
+    <string name="write_habit">write your healthy habit</string>
+    <string name="save">save</string>
+    <string name="finish">finish</string>
 </resources>
