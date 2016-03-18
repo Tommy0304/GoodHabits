@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quiz_view_pager_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="@dimen/horizontal_margin"
+    android:paddingStart="@dimen/horizontal_margin">
+
+    <TextView
+        android:id="@+id/onboarding_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/quiz_title_height"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:text="Something Dummy" />
+
+</RelativeLayout>

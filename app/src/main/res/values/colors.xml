@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9CCC65</color>
+    <color name="colorPrimaryDark">#33691E</color>
+    <color name="colorAccent">#7F40ff</color>
+
+    <color name="view_pager_indicator_page">@color/default_gray</color>
+
+    <color name="default_gray">#919191</color>
+
+    <color name="text_primary">@android:color/black</color>
+    <color name="text_secondary">#18541b</color>
+</resources>

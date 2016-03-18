@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/horizontal_margin"
+    android:paddingEnd="@dimen/horizontal_margin" >
+
+    <TextView
+        android:id="@+id/quiz_assessment_label"
+        style="@style/TextSecondary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_touch_area"
+        android:text="@string/quiz_label"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/quiz_assessment_age_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quiz_assessment_label">
+
+        <EditText
+            android:id="@+id/quiz_assessment_age_input"
+            style="@style/TextPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_touch_area"
+            android:hint="@string/quiz_hint_age"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/quiz_assessment_height_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quiz_assessment_age_container">
+
+        <EditText
+            android:id="@+id/quiz_assessment_height_input"
+            style="@style/TextPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_touch_area"
+            android:hint="@string/quiz_hint_height"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/quiz_assessment_weight_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quiz_assessment_height_container">
+
+        <EditText
+            android:id="@+id/quiz_assessment_weight_input"
+            style="@style/TextPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_touch_area"
+            android:hint="@string/quiz_hint_weight"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+
+</RelativeLayout>
