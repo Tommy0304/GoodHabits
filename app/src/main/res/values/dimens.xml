@@ -5,6 +5,7 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="vertical_margin">8dp</dimen>
     <dimen name="default_touch_area">48dp</dimen>
 
     <dimen name="view_pager_indicator_gap_width">6dp</dimen>

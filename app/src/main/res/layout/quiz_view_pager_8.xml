@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quiz_view_pager_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/question_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:paddingTop="25dp"
+        android:textColor="#000000"
+        android:text="Do you have a regular eating schedule?"
+
+        android:typeface="serif"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/radioGroup_8"
+        android:layout_below="@+id/question_1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentEnd="true">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            style="@style/TextAnswer"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/radioButton2"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="45dp"
+            android:text="Yes, it's easier to have regular meals" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            style="@style/TextAnswer"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/radioButton3"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="45dp"
+            android:text="Yes, but I struggle to follow it" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            style="@style/TextAnswer"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/radioButton4"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="45dp"
+            android:text="No" />
+
+
+    </RadioGroup>
+
+
+    />
+
+
+</RelativeLayout>
+    </ScrollView>

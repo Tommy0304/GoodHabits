@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_good_habits_10"
     android:fitsSystemWindows="true"
     tools:context="com.example.arthur.goodhabits.MainActivity">
 
@@ -23,13 +24,15 @@
         android:layout_marginTop="24dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:textSize="24sp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:typeface="serif"
         android:text="@string/motivational_text" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/main_viewpager"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

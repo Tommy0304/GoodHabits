@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#9CCC65</color>
     <color name="colorPrimaryDark">#33691E</color>
-    <color name="colorAccent">#7F40ff</color>
+    <color name="colorAccent">#1a53ff</color>
 
     <color name="view_pager_indicator_page">@color/default_gray</color>
 
@@ -10,4 +10,6 @@
 
     <color name="text_primary">@android:color/black</color>
     <color name="text_secondary">#18541b</color>
+
+    <color name="theme_background">#b3f0ff</color>
 </resources>

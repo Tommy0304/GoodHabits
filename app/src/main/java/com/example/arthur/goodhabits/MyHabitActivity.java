@@ -1,21 +1,25 @@
 package com.example.arthur.goodhabits;
 
-import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CalendarView;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.ListView;
 
 public class MyHabitActivity extends AppCompatActivity {
 
+    private static final String TAG = "MyHabitActivity";
+
     String mName = "";
 
-    TextView mPrintView;
+    ViewGroup mHabitManageerContainer;
+    EditText mTaskInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,28 +31,39 @@ public class MyHabitActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        mPrintView = (TextView) findViewById(R.id.myhabit_habit_value);
+        mHabitManageerContainer = (ViewGroup) findViewById(R.id.myhabit_habit_view_group);
+        mTaskInput = (EditText) findViewById(R.id.myhabit_healthy_habit_input);
 
-        findViewById(R.id.myhabit_save_button).setOnClickListener(new View.OnClickListener() {
+        final CalendarView calendarView = (CalendarView) findViewById(R.id.myhabit_calendar);
+        if (calendarView != null) {
+            calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+                @Override
+                public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
+                    Log.e(TAG, "onSelectedDayChange: " + year + " / " + month + " / " + dayOfMonth);
+                    mHabitManageerContainer.setVisibility(View.VISIBLE);
+                    calendarView.setVisibility(View.GONE);
+                }
+            });
+        }
+
+        ListView listView = (ListView) findViewById(R.id.myhabit_habit_list);
+        final HabitListAdapter habitListAdapter = new HabitListAdapter();
+        listView.setAdapter(habitListAdapter);
+
+        findViewById(R.id.myhabit_add_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText nameField = (EditText) findViewById(R.id.myhabit_healthy_habit_input);
-                Editable nameEditable = nameField.getText();
-                mName += nameEditable.toString()+'\n';
-                mPrintView.setText(mName);
-                nameField.setText("");
+                mName += mTaskInput.getText().toString()+'\n';
+                habitListAdapter.addHabit(new Habit(mTaskInput.getText().toString(), false));
+                mTaskInput.setText("");
             }
         });
 
-        findViewById(R.id.myhabit_finish_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.myhabit_done_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText nameField = (EditText) findViewById(R.id.myhabit_healthy_habit_input);
-                Editable nameEditable = nameField.getText();
-                mName += nameEditable.toString()+'\n';
-                Intent intent = new Intent(MyHabitActivity.this, Sec.class);
-                intent.putExtra("data", mName);
-                startActivity(intent);
+                mHabitManageerContainer.setVisibility(View.GONE);
+                calendarView.setVisibility(View.VISIBLE);
             }
         });
     }

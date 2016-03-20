@@ -37,7 +37,7 @@ public class MainPagerAdapter extends PagerAdapter {
 
         if (position == POSITION_2) {
             view = new ImageView(mContext);
-            ((ImageView)view).setImageResource(R.drawable.swiper);
+            ((ImageView)view).setImageResource(R.drawable.arrows);
         } else {
             view = new View(mContext);
         }

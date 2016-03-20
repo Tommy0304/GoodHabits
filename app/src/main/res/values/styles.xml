@@ -21,13 +21,22 @@
         <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_vertical</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">serif</item>
     </style>
 
     <style name="TextPrimary">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">18sp</item>
         <item name="android:gravity">center_vertical</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="TextAnswer">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:typeface">serif</item>
     </style>
 
 </resources>
